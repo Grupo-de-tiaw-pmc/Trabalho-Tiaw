@@ -1,0 +1,203 @@
+html{
+    overflow: hidden;
+}
+body{
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+}
+.Baixo {
+    background-color: greenyellow;
+    color: black;
+}
+.Medio {
+    background-color: yellow;
+    color: black;
+}
+.Alto {
+    background-color: red;
+    color: white;
+}
+.Urgente {
+    background-color: black;
+    color: white;
+}
+.Bio{
+    background-color: purple;
+    color: yellow;
+}
+.Amb{
+    background-color: green;
+    color: whitesmoke;
+}
+.AcTr{
+    background-color:rgb(189, 189, 0) ;
+    color: rgb(47, 47, 51);
+}
+.Clim{
+    background-color:rgb(80, 198, 99) ;
+    color: black;
+}
+select:hover,
+select:focus,
+select:active,
+select:checked {
+  color: yellow;
+  background-color: black;
+}
+select{
+    text-align: center;
+}
+  option[value=""] {
+    display: none;
+  }
+.Informacoes{
+    position: absolute;
+    width: fit-content;
+    top: 40%;
+    bottom: 30%;
+    left: 34%;
+    right: 34%;
+    align-items: center;
+    display: grid;
+    background-color: white;
+}
+textarea{
+    max-width: 28.7vw;
+    max-height: 7vh;
+    min-width: 28.7vw;
+    min-height: 7vh;
+    border-radius: 0%;
+    margin: 10px;
+}
+.perg{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+}
+.bttSub{
+    position: absolute;
+    top: 71%;
+    bottom: 26%;
+    left: 46%;
+    right: 46%;
+    background-color: white;
+    color: black;
+    font-style:italic;
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 10px;
+}
+.bttSub:hover{
+  background-color: black;
+  color: white;
+  top: 70.59%;
+  bottom: 25.59%;
+  left: 45.59%;
+  right: 45.59%;
+  font-weight: bolder;
+  border-color: blue;
+}
+.setvoltar{
+    max-width: 6%;
+    max-height: 6%;
+    filter: invert(100%);
+}
+.Logo{
+    position: absolute;
+    top: 1%;
+    right: 35%;
+    max-width: 30%;
+    min-height: 30%;
+}
+.mapExen{
+    position: fixed;
+    top:0%;
+    left:0%;
+    justify-content: center;
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+}
+.divMap{
+    position: fixed;
+    background-color: white;
+    top:0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    visibility: hidden;
+}
+.butSelec{
+    position: fixed;
+    top:95.43%;
+    left:90%;
+    justify-content: center;
+    visibility: hidd;
+    width: 7vw;
+    height: 4vh;
+    font-size: 8px;
+}
+.divMap.open{
+    visibility: visible;
+}
+#selecao {
+    border: 2px #aaf solid;
+    position: absolute;
+    display: none;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.perg{
+    text-align: center;
+    color:black;
+}
+#info{
+    position: fixed;
+    top:95.43%;
+    left:10%;
+    visibility: inherit;
+}
+.TxtFoot{
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
+    right: 1%;
+    color: whitesmoke;
+    font-size: 10px;
+}
+select{
+    font-size: 10px;
+}
+#BotaoSub{
+    font-size: 10px;
+}
+@media(max-width=500px){
+    .bttSub{
+        position: static;
+        width: 1000px;
+        background-color: white;
+        color: black;
+        font-style:italic;
+        font-weight: bold;
+        transition: 0.2s;
+        font-size: 10px;
+    }
+    .bttSub:hover{
+      background-color: black;
+      color: white;
+      top: 70.59%;
+      bottom: 25.59%;
+      left: 45.59%;
+      right: 45.59%;
+      font-weight: bolder;
+      border-color: blue;
+    }
+    .butSelec{
+        position: fixed;
+        top:95.43%;
+        left:90%;
+        justify-content: center;
+        visibility: hidd;
+        width: 10vw;
+        height: 4vh;
+        font-size: 2px;
+    }
+}

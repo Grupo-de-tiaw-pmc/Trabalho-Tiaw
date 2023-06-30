@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" id="CMain" media="(min-width:1200px) and (max-width:1750px)" href="./style(main).css">
+    <link rel="stylesheet" media="(min-width:1750.1px) and (max-width:2700px)" href="./style 4k.css">
+    <link rel="stylesheet" media="(min-width:1000px) and (max-width:1200px)" href="./style 1199px.css">
+    <link rel="stylesheet" media="(min-width:100px) and (max-width:999.9px)" href="./style 999px.css">
+    <title>Adicionar Informação</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- lembrete: fazer mais stylesheets para os elementos que estão entre os ja definidos
+    ps: definir com limites de heigth tambem -->
+</head>
+<style>
+    .test {
+    visibility: hidden;
+    background-image: linear-gradient( 111.4deg,  rgba(7, 7, 9, 0.500) 6.5%, rgba(27,24,113,0.700) 93.2% );
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: 900;
+    height: 100vh;
+    width: 100vw;
+    }
+    body{
+        background-color: black;
+    }
+    #mapP {
+      height: 98vh; 
+      width: 100%;
+    }
+    .test.open{
+        visibility: visible;
+    }
+    #AI{
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        z-index: 400;
+    }
+    .ai{
+        visibility: visible;
+        width: fit-content;
+        height: fit-content;
+        font-size: larger;
+        background-color: rgba(0, 250, 42, 0.555);
+        border-color: aqua;
+        color: navy;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+    .ai.close{
+        visibility: hidden;
+    }
+    .mapP{
+        visibility: visible;
+    }
+    .mapP.close{
+        visibility: hidden;
+    }
+    .login{
+        position: relative;
+        left: 10px;
+        
+    }
+    .contLOG{
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        z-index: 400;
+        width: 3.5vw;
+        height: auto;
+        background-color: whitesmoke;
+        border-radius: 40px;
+    }
+    .confg{
+        width: 3.5vw;
+        height: auto;
+    }
+    .contconf{
+        position: absolute;
+        top: 2%;
+        left: 9%;
+        z-index: 400;
+        width: 3.6vw;
+        height: auto;
+        background-color: whitesmoke;
+        border-radius: 40px;
+    }
+  </style>
+
+<body>
+    <div class="mapP" id="mapP"></div>
+  <div id="test" class="test">
+    <header>
+        <a onclick="openAI()" alt="Voltar para o mapa">
+            <img src="./voltar.png" class="setvoltar">
+        </a>
+        <img src="./logo.png" alt="Logo" class="Logo">
+    </header>
+    <div class="Informacoes">
+        <p class="perg">Qual problema deseja relatar?</p>
+        <textarea placeholder="Digite o problema" id="problText" cols="30" rows="3"></textarea>
+        <select name="nivelPerigo" id="nivPer" class="color">
+            <option value="">Selecione o nivel de perigo</option>
+            <option class="Baixo" value="Baixo">Baixo</option>
+            <option class="Medio" value="Medio">Medio</option>
+            <option class="Alto" value="Alto">Alto</option>
+            <option class="Urgente" value="Urgente">Urgente!</option>
+        </select>
+        <select name="tipoPerigo" id="TypePer" class="color2">
+            <option value="">Selecione o tipo de risco</option>
+            <option class="Bio" value="Bio">Biologico</option>
+            <option class="Amb" value="Amb">Ambiental</option>
+            <option class="AcTr" value="AcTr">Acidente de transito</option>
+            <option class="Clim" value="Clim">Climatico</option>
+        </select>
+        <button type="button"id="BotaoSub">Selecione a área no mapa</button>
+    </div>
+    <button type="button" class="bttSub" id="bs" onclick="openAI();test()">Submit</button>
+    <div class="divMap" id="mapa">
+        <div class="mapExen" id="map"></div>
+        <button type="submit" class="butSelec"id="BotaoSelec">selecionar</button>
+        <div id="info"></div>
+        <div id="selecao"></div>
+    </div>
+
+    <footer><P class="TxtFoot">Todos os direitos reservados a P²JMG</P></footer>
+  </div>
+  <button type="button" id="AI" class="ai">Adicionar Informação</button>
+  <a href="./Untitled-1.html" class="contLOG"><img src="./register_login_signup_icon_219991.png" alt="" class="login"></a>
+  <a href="./telaconfig.html" class="contconf"><img src="./settings_icon_187824.png" alt="" class="confg"></a>
+  <script src="./bas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
